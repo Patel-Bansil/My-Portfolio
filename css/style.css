@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+}
+body {
+  line-height: 1.5px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+::before,
+::after {
+  box-sizing: border-box;
+}
+.section {
+  background: var(--bg-black-900);
+  min-height: 100vh;
+  display: block;
+  padding: 0 30px;
+  opacity: 1;
+}
+.main-content {
+  padding-left: 270px;
+}
+/* aside */
+
+.aside {
+  width: 270px;
+  background: var(--bg-black-100);
+  border-right: 1px solid var(--bg-black-50);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+}
+.aside .logo {
+  position: absolute;
+  font-size: 30px;
+  top: 80px;
+  text-transform: capitalize;
+}
+.aside .logo a {
+  color: var(--text-black-900);
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding: 15px 20px;
+  position: relative;
+}
+.aside .logo a span {
+  font-family: "Clicker Script", cursive;
+  font-size: 50px;
+  color: var(--skin-color);
+}
+.aside .logo a::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+  left: 0;
+  bottom: 0;
+}
+.aside .logo a::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+  right: 0;
+  top: 0;
+}
+.aside .nav {
+  margin-top: 50px;
+}
+.aside .nav li {
+  margin-bottom: 20px;
+  display: block;
+}
+.aside .nav li a {
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--bg-black-50);
+  display: block;
+  color: var(--text-black-900);
+  padding: 5px 15px;
+}
+.aside .nav li a.active {
+  color: var(--skin-color);
+}
+.aside .nav li a i {
+  margin-right: 15px;
+}
+.aside .nav-toggler {
+  height: 40px;
+  width: 45px;
+  border: 1px solid var(--bg-black-50);
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 20px;
+  border-radius: 5px;
+  background: var(--bg-black-100);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.aside .nav-toggler span {
+  background: var(--skin-color);
+  width: 18px;
+  height: 3px;
+  position: relative;
+  display: inline-block;
+}
+.aside .nav-toggler span::before {
+  content: "";
+  position: absolute;
+  background: var(--skin-color);
+  width: 18px;
+  height: 3px;
+  top: -6px;
+  left: 0;
+}
+.aside .nav-toggler span::after {
+  content: "";
+  position: absolute;
+  background: var(--skin-color);
+  width: 18px;
+  height: 3px;
+  top: 6px;
+  left: 0;
+}
+/* home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-black-900);
+}
+.container {
+  /* background-color: rebeccapurple; */
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  line-height: 30px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.home .home-info {
+  flex: 0 0 60%;
+  min-width: 60%;
+}
+.home .home-info .hello {
+  font-size: 32px;
+  margin: 45px 0;
+}
+.home .home-info .hello span {
+  font-family: "Clicker Script", cursive;
+  color: var(--skin-color);
+  font-size: 34px;
+  font-weight: 700;
+}
+.home .home-info .my-profation {
+  font-size: 30px;
+  margin: 25px 0;
+}
+.home .home-info .typing {
+  color: var(--skin-color);
+}
+.home .home-info p {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: var(--text-black-700);
+}
+.home .home-info .btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  background: var(--skin-color);
+  transition: all 0.1s ease;
+  display: inline-block;
+  /* flex-wrap: nowrap; */
+}
+.home .home-info .btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #333333, #dd1818);
+}
+.home .home-img {
+  flex: 0 0 40%;
+  min-width: 40%;
+  text-align: center;
+  position: relative;
+  /* background-color: red; */
+}
+.home .home-img::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-bottom: 10px solid var(--skin-color);
+  border-right: 10px solid var(--skin-color);
+  right: -25px;
+  bottom: -50px;
+}
+.home .home-img::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-top: 10px solid var(--skin-color);
+  border-left: 10px solid var(--skin-color);
+  left: -25px;
+  top: -50px;
+}
+.container .home-img img {
+  height: 400px;
+  margin: auto;
+  border-radius: 5px;
+}
