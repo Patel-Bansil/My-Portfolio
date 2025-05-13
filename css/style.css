@@ -33,6 +33,9 @@ body {
 .main-content {
   padding-left: 270px;
 }
+.hiddne{
+  display: none !important;
+}
 /* aside */
 
 .aside {
@@ -202,7 +205,7 @@ ul {
   font-size: 20px;
   color: var(--text-black-700);
 }
-.home .home-info .btn {
+.btn {
   font-size: 16px;
   font-weight: 500;
   padding: 12px 35px;
@@ -214,7 +217,7 @@ ul {
   display: inline-block;
   /* flex-wrap: nowrap; */
 }
-.home .home-info .btn:hover {
+ .btn:hover {
   transform: scale(1.05);
   background: linear-gradient(to right, #333333, #dd1818);
 }
@@ -249,4 +252,139 @@ ul {
   height: 400px;
   margin: auto;
   border-radius: 5px;
+}
+
+/* about */
+.about .container{
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+.section-title{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 60px;
+  /* background-color: #dd1818; */
+}
+.section-title h2{
+  font-size: 40px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  font-family: "Clicker";
+  position: relative;
+}
+.section-title h2::before{
+  content: '';
+  width: 130px;
+  height: 4px;
+  background-color: var(--skin-color);
+  top: 125%;
+  left: 0px;
+  position: absolute;
+}
+.section-title h2::after{
+  content: '';
+  width: 90px;
+  height: 4px;
+  background-color: var(--skin-color);
+  top: 100%;
+  left: 0px;
+  margin-top: 1vw;
+  position: absolute;
+}
+.about-content{
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+.about-content .about-text{
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+.about-content .about-text h3{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-black-900);
+}
+.about-content .about-text h3 span{
+  color: var(--skin-color);
+}
+.about-content .about-text p{
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+.about-content .personal-info{
+  flex: 0 0 60%;
+  min-width: 60%;
+  margin-top: 40px;
+  /* background-color: red; */
+}
+.about-content .personal-info .info-item{
+  flex: 0 0 50%;
+  min-width: 50%;
+  /* background-color: red; */
+}
+.about-content .personal-info .info-item span{
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 4px;
+  display: inline-block ;
+}
+.about-content .personal-info .info-item span a{
+  color: blue;
+}
+.about-content .personal-info .info-item p{
+  font-weight: 600;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
+}
+.about-content .personal-info .buttons{
+  margin-top: 30px;
+}
+.about-content .personal-info .buttons .btn{
+  margin-right: 15px;
+  margin-top: 10px;
+}
+.about-content .skill{
+  flex: 0 0 40%;
+  min-width: 40%;
+  margin-top: 40px;
+  /* background-color: rebeccapurple; */
+}
+.about-content .skill .skill-item{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  /* background-color: rebeccapurple; */
+}
+.about-content .skill .skill-item h5{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+.about-content .skill .skill-item .progress{
+  background-color: var(--bg-black-50);
+  height: 7px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+.about-content .skill .skill-item .progress .progress-in{
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--skin-color);
+}
+.about-content .skill .skill-item .skill-percent{
+  position: absolute;
+  right: 0;
+  color: var(--text-black-900);
+  font-weight: 400;
+  top: -35px;
 }
