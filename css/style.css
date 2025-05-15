@@ -9,6 +9,14 @@
   --text-black-700: #504e70;
 }
 
+.darkmode {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
+
 /* Global Styles */
 body {
   line-height: 1.5px;
@@ -126,6 +134,37 @@ body {
   display: none !important;
 }
 
+.theme-switch {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+.theme-switch i {
+  font-size: 20px;
+}
+
+.theme-switch .fa-sun {
+  display: none;
+}
+
+body.darkmode .theme-switch .fa-moon {
+  display: none;
+}
+
+body.darkmode .theme-switch .fa-sun {
+  display: block;
+}
+
 /* Aside Section */
 .aside {
   width: 270px;
@@ -164,7 +203,7 @@ ul {
 
 .aside .logo a span {
   font-family: "Clicker Script", cursive;
-  font-size: 50px ;
+  font-size: 50px;
   color: var(--skin-color);
 }
 
@@ -619,7 +658,7 @@ ul {
   text-transform: capitalize;
 }
 
-.service .service-item .service-item-inner p llevo{
+.service .service-item .service-item-inner p {
   font-size: 16px;
   color: var(--text-black-700);
   line-height: 25px;
