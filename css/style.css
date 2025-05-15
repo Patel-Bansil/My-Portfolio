@@ -672,9 +672,9 @@ ul {
     margin-top: 17px;
   }
   .home .home-info .typing {
-    display: block;
+    display: inline;
     margin-top: 10px;
-    font-size: 26px;
+    font-size: 27px;
   }
   .home .home-info p {
     text-align: justify;

@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- Recommended -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/skins/color-1.css" />
     <link
@@ -24,19 +30,19 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i>Home</a>
+            <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-user"></i>About</a>
+            <a href="#about"><i class="fa fa-user"></i>About</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-list"></i>Services</a>
+            <a href="#services"><i class="fa fa-list"></i>Services</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i>Projects</a>
+            <a href="#projects"><i class="fa fa-briefcase"></i>Projects</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-comments"></i>Contact</a>
+            <a href="#contact"><i class="fa fa-comments"></i>Contact</a>
           </li>
         </ul>
         <div class="nav-toggler">
@@ -48,19 +54,18 @@
       <!-- main-content start-->
       <div class="main-content">
         <!-- home-section start-->
-        <div class="home section ">
+        <div class="home section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
                 <h3 class="hello">
                   Hello, my name is <span>Bansil Patel</span>
                 </h3>
-                <h3 class="my-profation">
-                  I'm a <span class="typing">MERN Stack Developer</span>
-                </h3>
+                <h3 class="my-profation">I'm a <span class="typing"></span></h3>
                 <p>
                   I'm a web developer with extensive experience for over 0
-                  years. My experties is to create a web app using MERN Stack...
+                  years. My experties is to create a web app using Frontend
+                  Development...
                 </p>
                 <a href="#Contact" class="btn">Hire me</a>
               </div>
@@ -73,7 +78,7 @@
         <!-- home-section End-->
 
         <!-- about-section start-->
-        <div class="about section ">
+        <div class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -85,17 +90,19 @@
                 <div class="row">
                   <div class="about-text padd-15">
                     <h3>
-                      I'm Bansil Patel and <span>MERN Stack Developer</span>
+                      I'm Bansil Patel and <span>Frontend Developer</span>
                     </h3>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Nobis voluptates maiores quis officia, consequatur quas
-                      cupiditate tempora necessitatibus rem quaerat quia ad
-                      animi laudantium assumenda eum facilis optio sequi fugiat,
-                      numquam eligendi iste. Veniam voluptate sint nihil amet,
-                      laudantium quaerat non quibusdam! Eum illum cumque, sed
-                      pariatur explicabo voluptas culpa. Minus optio provident
-                      dicta mollitia.
+                      As a passionate Frontend Developer, I specialize in
+                      creating visually appealing and user-friendly web
+                      interfaces. I have hands-on experience with modern
+                      technologies like HTML, CSS, JavaScript, and frameworks
+                      such as React and Bootstrap. My focus is on building
+                      responsive, accessible, and high-performance websites that
+                      deliver a seamless user experience. I am always eager to
+                      learn new tools and stay updated with the latest trends in
+                      web development to provide the best solutions for clients
+                      and users.
                     </p>
                   </div>
                 </div>
@@ -151,41 +158,41 @@
                   </div>
                   <div class="skill padd-15">
                     <div class="row">
-                        <div class="skill-item padd-15">
-                            <h5>HTML</h5>
-                            <div class="progress">
-                                <div class="progress-in" style="width: 90%;"></div>
-                                <div class="skill-percent">90%</div>
-                            </div>
+                      <div class="skill-item padd-15">
+                        <h5>HTML</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 90%"></div>
+                          <div class="skill-percent">90%</div>
                         </div>
-                        <div class="skill-item padd-15">
-                            <h5>CSS</h5>
-                            <div class="progress">
-                                <div class="progress-in" style="width: 80%;"></div>
-                                <div class="skill-percent">80%</div>
-                            </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>CSS</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%"></div>
+                          <div class="skill-percent">80%</div>
                         </div>
-                        <div class="skill-item padd-15">
-                            <h5>JS</h5>
-                            <div class="progress">
-                                <div class="progress-in" style="width: 60%;"></div>
-                                <div class="skill-percent">60%</div>
-                            </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>JS</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 60%"></div>
+                          <div class="skill-percent">60%</div>
                         </div>
-                        <div class="skill-item padd-15">
-                            <h5>Bootstrap</h5>
-                            <div class="progress">
-                                <div class="progress-in" style="width: 70%;"></div>
-                                <div class="skill-percent">70%</div>
-                            </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Bootstrap</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 70%"></div>
+                          <div class="skill-percent">70%</div>
                         </div>
-                        <div class="skill-item padd-15">
-                            <h5>Tailwind</h5>
-                            <div class="progress">
-                                <div class="progress-in" style="width: 50%;"></div>
-                                <div class="skill-percent">50%</div>
-                            </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Tailwind</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 50%"></div>
+                          <div class="skill-percent">50%</div>
                         </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -202,7 +209,13 @@
                               <i class="fa fa-calendar"></i>2019 - 2020
                             </h3>
                             <h4 class="timeline-title">SSC(10th)</h4>
-                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit similique assumenda dolorem, modi nemo rerum consequatur harum minus ut exercitationem atque veniam commodi illo necessitatibus facilis.</p>
+                            <p class="timeline-text">
+                              I completed my SSC (10th) in 2020 from
+                              Swaminarayan Dham International School with 64%.
+                              During this time, I built a strong academic
+                              foundation and developed a keen interest in
+                              technology and computers.
+                            </p>
                           </div>
                           <!-- timeline-items -->
                           <div class="timeline-item">
@@ -211,7 +224,12 @@
                               <i class="fa fa-calendar"></i>2021 - 2022
                             </h3>
                             <h4 class="timeline-title">HSC(12th)</h4>
-                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit similique assumenda dolorem, modi nemo rerum consequatur harum minus ut exercitationem atque veniam commodi illo necessitatibus facilis.</p>
+                            <p class="timeline-text">
+                              I completed my HSC (12th) Commerce in 2022 from
+                              Swaminarayan Dham International School with 75%.
+                              This period helped me enhance my analytical skills
+                              and further fueled my passion for web development.
+                            </p>
                           </div>
                           <!-- timeline-items -->
                           <div class="timeline-item">
@@ -219,8 +237,18 @@
                             <h3 class="timeline-date">
                               <i class="fa fa-calendar"></i>2024 - 2025
                             </h3>
-                            <h4 class="timeline-title">Bachelor of Computer Application</h4>
-                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit similique assumenda dolorem, modi nemo rerum consequatur harum minus ut exercitationem atque veniam commodi illo necessitatibus facilis.</p>
+                            <h4 class="timeline-title">
+                              Bachelor of Computer Application
+                            </h4>
+                            <p class="timeline-text">
+                              I completed my Bachelor of Computer Application
+                              (B.C.A) from Sankalchand Patel University with a
+                              CGPA of 8.22. During my studies, I gained strong
+                              knowledge in programming, web development, and
+                              software engineering, which helped me build a
+                              solid foundation for my career as a frontend
+                              developer.
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -235,28 +263,34 @@
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i>2019 - 2020
+                              <i class="fa fa-calendar"></i>2024 - Present
                             </h3>
-                            <h4 class="timeline-title">SSC(10th)</h4>
-                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit similique assumenda dolorem, modi nemo rerum consequatur harum minus ut exercitationem atque veniam commodi illo necessitatibus facilis.</p>
+                            <h4 class="timeline-title">Fresher</h4>
+                            <p class="timeline-text">
+                              I am currently a fresher and have not yet gained professional work experience. However, I am eager to apply my knowledge and skills in a real-world environment.
+                            </p>
                           </div>
                           <!-- timeline-items -->
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i>2021 - 2022
+                              <i class="fa fa-calendar"></i>2022 - 2024
                             </h3>
-                            <h4 class="timeline-title">HSC(12th)</h4>
-                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit similique assumenda dolorem, modi nemo rerum consequatur harum minus ut exercitationem atque veniam commodi illo necessitatibus facilis.</p>
+                            <h4 class="timeline-title">Academic Projects</h4>
+                            <p class="timeline-text">
+                              During my academic journey, I have worked on several projects and assignments that have helped me develop practical skills in web development and programming.
+                            </p>
                           </div>
                           <!-- timeline-items -->
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i>2024 - 2025
+                              <i class="fa fa-calendar"></i>2024 - Present
                             </h3>
-                            <h4 class="timeline-title">Bachelor of Computer Application</h4>
-                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit similique assumenda dolorem, modi nemo rerum consequatur harum minus ut exercitationem atque veniam commodi illo necessitatibus facilis.</p>
+                            <h4 class="timeline-title">Career Objective</h4>
+                            <p class="timeline-text">
+                              I am actively seeking opportunities such as internships or entry-level positions to start my professional career and contribute to the growth of an organization while enhancing my own abilities.
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -270,9 +304,9 @@
         <!-- about-section End-->
 
         <!-- Services-section start-->
-         <div class="service section ">
+        <div class="service section" id="services">
           <div class="container">
-             <div class="row">
+            <div class="row">
               <div class="section-title padd-15">
                 <h2>Services</h2>
               </div>
@@ -285,7 +319,9 @@
                     <i class="fa fa-mobile-alt"></i>
                   </div>
                   <h4>Responsive Design</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus velit tenetur?</p>
+                  <p>
+                    I create websites that look great and function perfectly on all devices, ensuring a seamless user experience on mobiles, tablets, and desktops.
+                  </p>
                 </div>
               </div>
               <!-- services-item start -->
@@ -296,7 +332,9 @@
                     <i class="fa fa-laptop-code"></i>
                   </div>
                   <h4>Website Development</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus velit tenetur?</p>
+                  <p>
+                    develop modern, fast, and scalable websites using the latest technologies like HTML, CSS, JavaScript, and frameworks such as React.
+                  </p>
                 </div>
               </div>
               <!-- services-item start -->
@@ -307,7 +345,9 @@
                     <i class="fa fa-palette"></i>
                   </div>
                   <h4>Web Design</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus velit tenetur?</p>
+                  <p>
+                    I design visually appealing and user-friendly interfaces that enhance user engagement and reflect your brand identity.
+                  </p>
                 </div>
               </div>
               <!-- services-item start -->
@@ -317,8 +357,10 @@
                   <div class="icon">
                     <i class="fa fa-code"></i>
                   </div>
-                  <h4>Website Development</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus velit tenetur?</p>
+                  <h4>UI/UX Optimization</h4>
+                  <p>
+                    I focus on improving the usability and accessibility of your website, making sure users have a smooth and enjoyable experience.
+                  </p>
                 </div>
               </div>
               <!-- services-item start -->
@@ -328,8 +370,10 @@
                   <div class="icon">
                     <i class="fa fa-search"></i>
                   </div>
-                  <h4>Website Development</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus velit tenetur?</p>
+                  <h4>Performance Optimization</h4>
+                  <p>
+                    I optimize website speed and performance, ensuring fast load times and efficient resource usage for better SEO and user retention.
+                  </p>
                 </div>
               </div>
               <!-- services-item start -->
@@ -339,21 +383,22 @@
                   <div class="icon">
                     <i class="fa fa-bullhorn"></i>
                   </div>
-                  <h4>Website Development</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus velit tenetur?</p>
+                  <h4>Cross-Browser Compatibility</h4>
+                  <p>
+                    I ensure your website works flawlessly across all major browsers, providing a consistent experience for every user.
+                  </p>
                 </div>
               </div>
               <!-- services-item start -->
-
             </div>
           </div>
-         </div>
+        </div>
         <!-- Services-section End-->
 
         <!-- Project-section start-->
-         <div class="project section ">
+        <div class="project section" id="projects">
           <div class="container">
-             <div class="row">
+            <div class="row">
               <div class="section-title padd-15">
                 <h2>Projects</h2>
               </div>
@@ -365,68 +410,68 @@
             </div>
             <div class="row">
               <!-- Project-item start -->
-               <div class="project-item padd-15">
+              <div class="project-item padd-15">
                 <div class="project-item-inner shadow-dark">
                   <div class="project-img">
-                    <img src="./images/weather.png" alt="">
+                    <img src="./images/weather.png" alt="" />
                   </div>
                 </div>
-               </div>
+              </div>
               <!-- Project-item End -->
               <!-- Project-item start -->
-               <div class="project-item padd-15">
+              <div class="project-item padd-15">
                 <div class="project-item-inner shadow-dark">
                   <div class="project-img">
-                    <img src="./images/To-Do.png" alt="">
+                    <img src="./images/To-Do.png" alt="" />
                   </div>
                 </div>
-               </div>
+              </div>
               <!-- Project-item End -->
               <!-- Project-item start -->
-               <div class="project-item padd-15">
+              <div class="project-item padd-15">
                 <div class="project-item-inner shadow-dark">
                   <div class="project-img">
-                    <img src="./images/future.png" alt="">
+                    <img src="./images/future.png" alt="" />
                   </div>
                 </div>
-               </div>
+              </div>
               <!-- Project-item End -->
               <!-- Project-item start -->
-               <div class="project-item padd-15">
+              <div class="project-item padd-15">
                 <div class="project-item-inner shadow-dark">
                   <div class="project-img">
-                    <img src="./images/fodd.png" alt="">
+                    <img src="./images/fodd.png" alt="" />
                   </div>
                 </div>
-               </div>
+              </div>
               <!-- Project-item End -->
               <!-- Project-item start -->
-               <div class="project-item padd-15">
+              <div class="project-item padd-15">
                 <div class="project-item-inner shadow-dark">
                   <div class="project-img">
-                    <img src="./images/Bubble.png" alt="">
+                    <img src="./images/Bubble.png" alt="" />
                   </div>
                 </div>
-               </div>
+              </div>
               <!-- Project-item End -->
               <!-- Project-item start -->
-               <div class="project-item padd-15">
+              <div class="project-item padd-15">
                 <div class="project-item-inner shadow-dark">
                   <div class="project-img">
-                    <img src="./images/Hospital.png" alt="">
+                    <img src="./images/Hospital.png" alt="" />
                   </div>
                 </div>
-               </div>
+              </div>
               <!-- Project-item End -->
             </div>
           </div>
-         </div>
+        </div>
         <!-- Project-section End-->
 
         <!-- contact-section start-->
-         <div class="contact section">
+        <div class="contact section" id="contact">
           <div class="container">
-             <div class="row">
+            <div class="row">
               <div class="section-title padd-15">
                 <h2>Contact Me</h2>
               </div>
@@ -435,85 +480,119 @@
             <h4 class="contact-sub-title padd-15">I'm At Your Service</h4>
             <div class="row">
               <!-- contact-info-item-start -->
-               <div class="contact-info-item padd-15">
+              <div class="contact-info-item padd-15">
                 <div class="icon"><i class="fa fa-phone"></i></div>
                 <h4>Call Us On</h4>
                 <p>91+ 9313861130</p>
-               </div>
+              </div>
               <!-- contact-info-item-End -->
               <!-- contact-info-item-start -->
-               <div class="contact-info-item padd-15">
+              <div class="contact-info-item padd-15">
                 <div class="icon"><i class="fa fa-envelope"></i></div>
                 <h4>E-mail</h4>
                 <p>bansilpatel162@gmail.com</p>
-               </div>
+              </div>
               <!-- contact-info-item-End -->
               <!-- contact-info-item-start -->
-               <div class="contact-info-item padd-15">
+              <div class="contact-info-item padd-15">
                 <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
                 <h4>Location</h4>
                 <p>Unjha</p>
-               </div>
+              </div>
               <!-- contact-info-item-End -->
               <!-- contact-info-item-start -->
-               <div class="contact-info-item padd-15">
+              <div class="contact-info-item padd-15">
                 <div class="icon"><i class="fa fa-telegram"></i></div>
                 <h4>Telegram</h4>
                 <p>Bansil Mahendrabhai Patel</p>
-               </div>
+              </div>
               <!-- contact-info-item-End -->
             </div>
             <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-            <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO YOUR MESSAGES</h4>
+            <h4 class="contact-sub-title padd-15">
+              I'M VERY RESPONSIVE TO YOUR MESSAGES
+            </h4>
             <!-- contact form start -->
-             <div class="row">
+            <div class="row">
               <div class="contact-form padd-15">
                 <!-- First-row of form -->
                 <div class="row">
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Name">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name"
+                      />
                     </div>
                   </div>
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                      />
                     </div>
                   </div>
                 </div>
                 <!-- Second-row of form -->
-                 <div class="row">
+                <div class="row">
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Subject">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Subject"
+                      />
                     </div>
                   </div>
-                 </div>
+                </div>
                 <!-- Third-row of form -->
-                 <div class="row">
+                <div class="row">
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
-                      <textarea name="" class="form-control" placeholder="Message..." id="textarea" style="resize: none;"></textarea>
+                      <textarea
+                        name=""
+                        class="form-control"
+                        placeholder="Message..."
+                        id="textarea"
+                        style="resize: none"
+                      ></textarea>
                     </div>
                   </div>
-                 </div>
+                </div>
                 <!-- Fourth-row of form -->
-                 <div class="row">
+                <div class="row">
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
                       <button type="submit" class="btn">Send Message</button>
                     </div>
                   </div>
-                 </div>
+                </div>
               </div>
-             </div>
+            </div>
           </div>
-         </div>
+        </div>
         <!-- comtact-section End-->
       </div>
       <!-- main-content End-->
     </div>
     <!-- main-container End -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <!-- Recommended -->
     <script src="./js/script.js"></script>
   </body>
 </html>
