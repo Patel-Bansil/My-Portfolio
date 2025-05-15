@@ -624,6 +624,7 @@ ul {
 .contact .contact-form {
   flex: 0 0 100%;
   max-width: 100%;
+  position: relative;
 }
 .contact .contact-form .col-6 {
   flex: 0 0 50%;
@@ -656,6 +657,7 @@ ul {
 .contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
+  z-index: 2;
 }
 
 /* responsive */
