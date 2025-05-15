@@ -34,11 +34,11 @@ document.querySelectorAll('.nav a').forEach(function(link) {
 
 
 document.querySelectorAll(".nav a").forEach((link)=>{
-    link.addEventListener("click",function(value){
+    link.addEventListener("click",function(e){
         // console.log(value.target.getAttribute("href"));
-        let targetedID = value.target.getAttribute("href");
+        let targetedID = e.target.getAttribute("href");
         if(targetedID.startsWith('#')){
-            event.preventDefault();
+            e.preventDefault();
             let findedSection = document.querySelector(targetedID);
             if (findedSection) {
                 scroll.scrollTo(findedSection)
@@ -54,3 +54,11 @@ Shery.mouseFollower({
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 0.5,
 });
+
+
+let contactForm = document.querySelector('.contact-form')
+contactForm.addEventListener("submit",(e)=>{
+  setTimeout(() => {
+    contactForm.reset()
+  }, 1000);
+})
