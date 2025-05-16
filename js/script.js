@@ -100,3 +100,42 @@ themeSwitch.addEventListener("click", () => {
     disableDarkmode();
   }
 });
+
+/* <-============= Aside ============->*/
+
+const navToggler = document.querySelector('.nav-toggler');
+const aside = document.querySelector('.aside');
+const nav = document.querySelector(".nav");
+const navList = nav.querySelectorAll("li");
+const navLinks = nav.querySelectorAll('.nav a');
+
+// Toggler par click: aside show/hide
+if (navToggler && aside) {
+  navToggler.addEventListener('click', function () {
+    aside.classList.toggle('show');
+  });
+}
+
+// Nav links par click event
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    // 1. Smooth scroll (Locomotive)
+    const targetId = this.getAttribute('href');
+    if (targetId && targetId.startsWith('#')) {
+      e.preventDefault();
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        scroll.scrollTo(targetSection);
+      }
+    }
+
+    // 2. Active class update
+    navList.forEach(li => li.querySelector('a').classList.remove('active'));
+    this.classList.add('active');
+
+    // 3. Aside close on small screen
+    if (window.innerWidth <= 1400 && aside) {
+      aside.classList.remove('show');
+    }
+  });
+});

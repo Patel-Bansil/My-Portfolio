@@ -264,7 +264,7 @@ ul {
   left: 300px;
   top: 20px;
   border-radius: 5px;
-  background: var(--bg-black-100);
+  background:white;
   display: none;
   align-items: center;
   justify-content: center;
@@ -988,5 +988,33 @@ ul {
   .contact .contact-info-item {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+}
+
+@media (min-width: 1401px) {
+  .aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1400px) {
+  .aside {
+    left: -270px;
+    transition: left 0.3s;
+  }
+  .aside.show {
+    left: 0 !important;
+  }
+  .nav-toggler {
+    display: flex !important;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 999;
+  }
+  .main-content {
+    padding-left: 0;
   }
 }
