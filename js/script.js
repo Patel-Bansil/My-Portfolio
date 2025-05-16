@@ -45,13 +45,24 @@ document.querySelectorAll(".nav a").forEach((link) => {
     }
   });
 });
+
 /* <-============= Mouse Follower Feature ============->*/
 
-Shery.mouseFollower({
-  //Parameters are optional.
-  skew: true,
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 0.5,
+const enableMouseFollower = () => {
+  if (window.innerWidth > 1024) {
+    Shery.mouseFollower({
+      //Parameters are optional.
+      skew: true,
+      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+      duration: 0.5,
+    });
+  }
+};
+enableMouseFollower()
+
+window.addEventListener('resize', function() {
+  // Optionally, you can reload the page or handle destroy/init here
+   location.reload(); // Uncomment if you want to reload on resize
 });
 
 /* <-============= submit form Feature ============->*/
@@ -69,20 +80,20 @@ let darkmode = localStorage.getItem("darkmode");
 const themeSwitch = document.querySelector(".theme-switch");
 
 const enableDarkmode = () => {
-  document.body.classList.add("darkmode")
-  localStorage.setItem("darkmode","active")
+  document.body.classList.add("darkmode");
+  localStorage.setItem("darkmode", "active");
 };
 const disableDarkmode = () => {
-  document.body.classList.remove("darkmode")
-  localStorage.setItem("darkmode", null)
+  document.body.classList.remove("darkmode");
+  localStorage.setItem("darkmode", null);
 };
 
 if (darkmode === "active") {
-  enableDarkmode()
+  enableDarkmode();
 }
 
 themeSwitch.addEventListener("click", () => {
-  darkmode = localStorage.getItem("darkmode")
+  darkmode = localStorage.getItem("darkmode");
   if (darkmode !== "active") {
     enableDarkmode();
   } else {
