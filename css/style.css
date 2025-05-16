@@ -145,8 +145,8 @@ body {
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 20px;
-  top: 80px;
+  right: 15px;
+  top: 15px;
 }
 
 .theme-switch i {
@@ -261,8 +261,8 @@ ul {
   border: 1px solid var(--bg-black-50);
   cursor: pointer;
   position: fixed;
-  left: 370px;
-  top: 20px;
+  left: 15px;
+  top: 15px;
   border-radius: 5px;
   background:white;
   display: none;
@@ -1010,8 +1010,8 @@ ul {
   .nav-toggler {
     display: flex !important;
     position: fixed;
-    left: 20px;
-    top: 20px;
+    left: 15px;
+    top: 15px;
     z-index: 999;
   }
   .main-content {
