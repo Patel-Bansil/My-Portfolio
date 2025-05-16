@@ -328,6 +328,7 @@ ul {
 }
 
 .home .home-info .typing {
+  font-weight: 600;
   color: var(--skin-color);
 }
 

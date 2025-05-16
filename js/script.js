@@ -56,13 +56,20 @@ const enableMouseFollower = () => {
       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
       duration: 0.5,
     });
+
+/* <-============= Megnet Feature ============->*/
+
+    Shery.makeMagnet(".theme-switch, .btn, .logo", {
+      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+      duration: 1,
+    });
   }
 };
-enableMouseFollower()
+enableMouseFollower();
 
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function () {
   // Optionally, you can reload the page or handle destroy/init here
-   location.reload(); // Uncomment if you want to reload on resize
+  location.reload(); // Uncomment if you want to reload on resize
 });
 
 /* <-============= submit form Feature ============->*/
@@ -103,25 +110,25 @@ themeSwitch.addEventListener("click", () => {
 
 /* <-============= Aside ============->*/
 
-const navToggler = document.querySelector('.nav-toggler');
-const aside = document.querySelector('.aside');
+const navToggler = document.querySelector(".nav-toggler");
+const aside = document.querySelector(".aside");
 const nav = document.querySelector(".nav");
 const navList = nav.querySelectorAll("li");
-const navLinks = nav.querySelectorAll('.nav a');
+const navLinks = nav.querySelectorAll(".nav a");
 
 // Toggler par click: aside show/hide
 if (navToggler && aside) {
-  navToggler.addEventListener('click', function () {
-    aside.classList.toggle('show');
+  navToggler.addEventListener("click", function () {
+    aside.classList.toggle("show");
   });
 }
 
 // Nav links par click event
-navLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
+navLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
     // 1. Smooth scroll (Locomotive)
-    const targetId = this.getAttribute('href');
-    if (targetId && targetId.startsWith('#')) {
+    const targetId = this.getAttribute("href");
+    if (targetId && targetId.startsWith("#")) {
       e.preventDefault();
       const targetSection = document.querySelector(targetId);
       if (targetSection) {
@@ -130,12 +137,65 @@ navLinks.forEach(link => {
     }
 
     // 2. Active class update
-    navList.forEach(li => li.querySelector('a').classList.remove('active'));
-    this.classList.add('active');
+    navList.forEach((li) => li.querySelector("a").classList.remove("active"));
+    this.classList.add("active");
 
     // 3. Aside close on small screen
     if (window.innerWidth <= 1400 && aside) {
-      aside.classList.remove('show');
+      aside.classList.remove("show");
     }
   });
+});
+
+
+/* <-============= Gsap Animations ============->*/
+
+gsap.from(".nav li, .logo", {
+  stagger: 0.2,
+  y: 15,
+  duration: 1,
+  ease: Power2,
+  opacity: 0,
+});
+
+gsap.from(".theme-switch", {
+  stagger: 0.2,
+  x: 25,
+  duration: 1,
+  ease: Power2,
+  opacity: 0,
+});
+
+gsap.from(".nav-toggler", {
+  stagger: 0.2,
+  x: -25,
+  duration: 1,
+  ease: Power2,
+  opacity: 0,
+});
+
+
+// Shery.textAnimate(".hello", {
+//   style: 2,
+//   y: 15,
+//   delay: 0.1,
+//   duration: 1,
+//   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+//   multiplier: 0.1,
+// });
+
+gsap.from(".hello, .my-profation", {
+  stagger: 0.2,
+  y: 30,
+  duration: 1,
+  ease: Expo,
+  opacity:0
+});
+
+gsap.from(".home-img", {
+  stagger: 0.2,
+  x: 30,
+  duration: 1,
+  ease: Expo,
+  opacity:0
 });
