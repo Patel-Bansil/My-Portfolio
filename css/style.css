@@ -19,6 +19,8 @@
 
 /* Global Styles */
 body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto !important;
   line-height: 1.5px;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -153,7 +155,7 @@ body {
   font-size: 20px;
 }
 
-.theme-switch .fa-sun {
+.theme-switch .fa-spin {
   display: none;
 }
 
@@ -161,7 +163,7 @@ body.darkmode .theme-switch .fa-moon {
   display: none;
 }
 
-body.darkmode .theme-switch .fa-sun {
+body.darkmode .theme-switch .fa-spin {
   display: block;
 }
 
@@ -264,7 +266,7 @@ ul {
   left: 15px;
   top: 15px;
   border-radius: 5px;
-  background:white;
+  background: white;
   display: none;
   align-items: center;
   justify-content: center;
@@ -428,7 +430,7 @@ ul {
 }
 
 .about-content .personal-info .info-item span a {
-  color: blue;
+  color: var(--skin-color);
 }
 
 .about-content .personal-info .info-item p {
@@ -803,6 +805,15 @@ ul {
   z-index: 2;
 }
 
+input,
+textarea,
+select,
+button {
+  touch-action: manipulation;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
 /* Responsive Styles */
 @media (min-width: 200px) and (max-width: 699px) {
   .aside {
@@ -993,7 +1004,7 @@ ul {
 }
 
 @media (min-width: 1401px) {
-  .aside{
+  .aside {
     display: flex;
     align-items: center;
     justify-content: center;

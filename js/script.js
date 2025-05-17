@@ -9,10 +9,23 @@ let typed = new Typed(".typing", {
 
 /* <-============= Smooth Scrolling Feature ============->*/
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector(".scroll-section"),
-  smooth: true,
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  direction: 'vertical',
+  gestureDirection: 'vertical',
+  smooth: window.innerWidth > 1024,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
 });
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 /*
 // Nav ma je links che, ena click par smooth scroll karva mate
@@ -34,13 +47,12 @@ document.querySelectorAll('.nav a').forEach(function(link) {
 
 document.querySelectorAll(".nav a").forEach((link) => {
   link.addEventListener("click", function (e) {
-    // console.log(value.target.getAttribute("href"));
-    let targetedID = e.target.getAttribute("href");
-    if (targetedID.startsWith("#")) {
+    const targetId = this.getAttribute("href");
+    if (targetId && targetId.startsWith("#")) {
       e.preventDefault();
-      let findedSection = document.querySelector(targetedID);
-      if (findedSection) {
-        scroll.scrollTo(findedSection);
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        lenis.scrollTo(targetSection);
       }
     }
   });
@@ -48,7 +60,7 @@ document.querySelectorAll(".nav a").forEach((link) => {
 
 /* <-============= Mouse Follower Feature ============->*/
 
-const enableMouseFollower = () => {
+const enableMouseFollowerAndMegneteffect = () => {
   if (window.innerWidth > 1024) {
     Shery.mouseFollower({
       //Parameters are optional.
@@ -65,7 +77,7 @@ const enableMouseFollower = () => {
     });
   }
 };
-enableMouseFollower();
+enableMouseFollowerAndMegneteffect();
 
 window.addEventListener("resize", function () {
   // Optionally, you can reload the page or handle destroy/init here
@@ -132,7 +144,7 @@ navLinks.forEach((link) => {
       e.preventDefault();
       const targetSection = document.querySelector(targetId);
       if (targetSection) {
-        scroll.scrollTo(targetSection);
+        lenis.scrollTo(targetSection);
       }
     }
 
@@ -173,16 +185,6 @@ gsap.from(".nav-toggler", {
   ease: Power2,
   opacity: 0,
 });
-
-
-// Shery.textAnimate(".hello", {
-//   style: 2,
-//   y: 15,
-//   delay: 0.1,
-//   duration: 1,
-//   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-//   multiplier: 0.1,
-// });
 
 gsap.from(".hello, .my-profation", {
   stagger: 0.2,
