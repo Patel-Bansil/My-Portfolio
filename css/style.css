@@ -18,6 +18,10 @@
 }
 
 /* Global Styles */
+html {
+  scroll-behavior: auto !important;
+}
+
 body {
   overscroll-behavior: none;
   -webkit-overflow-scrolling: auto !important;
