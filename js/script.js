@@ -58,6 +58,23 @@ document.querySelectorAll(".nav a").forEach((link) => {
   });
 });
 
+document.querySelector(".hire-me").addEventListener("click", function(e) {
+  e.preventDefault();
+  const contactSection = document.querySelector("#contact");
+  if (contactSection) {
+    lenis.scrollTo(contactSection);
+  }
+    // Nav links par thi active class remove karo
+  document.querySelectorAll(".nav a").forEach((link) => {
+    link.classList.remove("active");
+  });
+  // Contact nav link ne active karo (jo hoy to)
+  const contactNavLink = document.querySelector('.nav a[href="#contact"]');
+  if (contactNavLink) {
+    contactNavLink.classList.add("active");
+  }
+});
+
 /* <-============= Mouse Follower Feature ============->*/
 
 const enableMouseFollowerAndMegneteffect = () => {
