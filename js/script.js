@@ -12,9 +12,10 @@ let typed = new Typed(".typing", {
 const lenis = new Lenis({
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  direction: 'vertical',
-  gestureDirection: 'vertical',
+  direction: "vertical",
+  gestureDirection: "vertical",
   smooth: true,
+  syncTouch: true,
   mouseMultiplier: 1,
   smoothTouch: false,
   touchMultiplier: 2,
@@ -27,54 +28,6 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
-/*
-// Nav ma je links che, ena click par smooth scroll karva mate
-document.querySelectorAll('.nav a').forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    // href ni value (e.g. "#about")
-    var targetId = this.getAttribute('href');
-    // Jou ke href # thi start thay che ke nai (matlab section par javu che)
-    if (targetId && targetId.startsWith('#')) {
-      event.preventDefault(); // Default jump rokvi devo
-      var targetSection = document.querySelector(targetId); // Section find karvo
-      if (targetSection) {
-        scroll.scrollTo(targetSection); // Locomotive thi scroll karvu
-      }
-    }
-  });
-});
-*/
-
-document.querySelectorAll(".nav a").forEach((link) => {
-  link.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
-    if (targetId && targetId.startsWith("#")) {
-      e.preventDefault();
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        lenis.scrollTo(targetSection);
-      }
-    }
-  });
-});
-
-document.querySelector(".hire-me").addEventListener("click", function(e) {
-  e.preventDefault();
-  const contactSection = document.querySelector("#contact");
-  if (contactSection) {
-    lenis.scrollTo(contactSection);
-  }
-    // Nav links par thi active class remove karo
-  document.querySelectorAll(".nav a").forEach((link) => {
-    link.classList.remove("active");
-  });
-  // Contact nav link ne active karo (jo hoy to)
-  const contactNavLink = document.querySelector('.nav a[href="#contact"]');
-  if (contactNavLink) {
-    contactNavLink.classList.add("active");
-  }
-});
-
 /* <-============= Mouse Follower Feature ============->*/
 
 const enableMouseFollowerAndMegneteffect = () => {
@@ -86,7 +39,7 @@ const enableMouseFollowerAndMegneteffect = () => {
       duration: 0.5,
     });
 
-/* <-============= Megnet Feature ============->*/
+    /* <-============= Megnet Feature ============->*/
 
     Shery.makeMagnet(".theme-switch, .btn, .logo", {
       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
@@ -166,11 +119,29 @@ navLinks.forEach((link) => {
 
     // 3. Aside close on small screen
     if (window.innerWidth <= 1400 && aside) {
-      aside.classList.remove("show");
+      setTimeout(() => {
+        aside.classList.remove("show");
+      }, 400); // 400ms delay for smooth scroll
     }
   });
 });
 
+document.querySelector(".hire-me").addEventListener("click", function (e) {
+  e.preventDefault();
+  const contactSection = document.querySelector("#contact");
+  if (contactSection) {
+    lenis.scrollTo(contactSection);
+  }
+  // Nav links par thi active class remove karo
+  document.querySelectorAll(".nav a").forEach((link) => {
+    link.classList.remove("active");
+  });
+  // Contact nav link ne active karo (jo hoy to)
+  const contactNavLink = document.querySelector('.nav a[href="#contact"]');
+  if (contactNavLink) {
+    contactNavLink.classList.add("active");
+  }
+});
 
 /* <-============= Gsap Animations ============->*/
 
@@ -203,7 +174,7 @@ gsap.from(".hello, .my-profation", {
   y: 30,
   duration: 1,
   ease: Expo,
-  opacity:0
+  opacity: 0,
 });
 
 gsap.from(".home-img", {
@@ -211,5 +182,5 @@ gsap.from(".home-img", {
   x: 30,
   duration: 1,
   ease: Expo,
-  opacity:0
+  opacity: 0,
 });
