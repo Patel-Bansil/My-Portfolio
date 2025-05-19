@@ -96,11 +96,6 @@ const enableMouseFollowerAndMegneteffect = () => {
 };
 enableMouseFollowerAndMegneteffect();
 
-window.addEventListener("resize", function () {
-  // Optionally, you can reload the page or handle destroy/init here
-  location.reload(); // Uncomment if you want to reload on resize
-});
-
 /* <-============= submit form Feature ============->*/
 
 let contactForm = document.querySelector(".contact-form");
